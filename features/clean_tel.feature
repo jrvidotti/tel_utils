@@ -3,10 +3,10 @@
 Funcionalidade: Formatar telefones
 
     Cenario: Números possíveis de serem formatados
-        Dado que eu tenho o número "<numero>"
-        E meu DDD padrão é "65"
-        Quando eu formatar o número
-        Então terei como resultado o número "<resultado>"
+        Dado que meu DDD padrão é "65"
+        E que eu tenho o número "<numero>"
+        Quando eu criar o objeto PhoneNumber
+        Então o numero formatado será "<resultado>"
 
     Exemplos:
         | numero          | resultado        |
@@ -36,12 +36,16 @@ Funcionalidade: Formatar telefones
         | 906536233181    | (065) 3623-3181  |
         | 190             | 190              |
         | 10325           | 10325            |
+        | 3225980         | (065) 3322-5980  |
+        | 6225980         | (065) 3622-5980  |
+        | 0214199505598   | (041) 9950-5598  |
+        | 0156592567862   | (065) 9256-7862  |
 
-    Cenario: Números que não devem ser formatados
-        Dado que eu tenho o número "<numero>"
-        E meu DDD padrão é "65"
-        Quando eu formatar o número
-        Então deverá ocorrer um erro
+    Cenario: Números possíveis de serem formatados
+        Dado que meu DDD padrão é "65"
+        E que eu tenho o número "<numero>"
+        Quando eu criar o objeto PhoneNumber
+        Então o numero será vazio
 
     Exemplos:
         | numero        |
