@@ -5,7 +5,7 @@ setup(
     version='0.1.0',
     author='Junior Vidotti',
     author_email='jrvidotti@gmail.com',
-    packages=['telutils', 'telutils.test'],
+    packages=['telutils', 'telutils.features'],
     scripts=[],
     url='http://pypi.python.org/pypi/TelUtils/',
     license='LICENSE.txt',
