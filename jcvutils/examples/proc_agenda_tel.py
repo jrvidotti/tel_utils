@@ -2,13 +2,10 @@
 # coding: utf-8
 import sys
 import getopt
-from tel_utils import PhoneNumber
+from jcvutils.telutils import PhoneNumber
 
-def main(argv=None):
-    if argv is None:
-        argv = sys.argv
-
-    f = open(argv[1])
+def main():
+    f = open('teste-agenda.csv')
 
     head = ['First Name','E-mail Address','Mobile Phone','Primary Phone','Home Phone','Home Phone 2','Company Main Phone','Business Phone','Business Phone 2']
     print '"'+'","'.join(head)+'"'
